@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="layout/layout :: head">
+  </head>
+  <body id="body-pd">
+
+    <div th:replace="layout/layout :: header"></div>
+    <div th:replace="layout/layout :: sidebar"></div>
+
+    <section class="container-fluid">
+      <h1 class="mb-3 mt-4">Dashboard</h1>
+
+      <div class="row justify-content-center mb-5">
+        <div class="col-xl-3 col-lg-6 mb-2">
+          <div class="card">
+            <div class="card-body card-dash users">
+              <div class="row">
+                <div class="col-4 text-center mt-2">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="col-8">
+                  <h2>1432</h2>
+                  <span>Total usuarios</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 mb-2 ">
+          <div class="card">
+            <div class="card-body card-dash doctors">
+              <div class="row">
+                <div class="col-4 text-center mt-2">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="col-8">
+                  <h2>234</h2>
+                  <span>Total doctores</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 mb-2 ">
+          <div class="card">
+            <div class="card-body card-dash medicals">
+              <div class="row">
+                <div class="col-4 text-center mt-2">
+                  <i class="fa-solid fa-house medicals"></i>
+                </div>
+                <div class="col-8">
+                  <h2>3400</h2>
+                  <span>Consultas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 mb-2">
+          <div class="card">
+            <div class="card-body card-dash angries">
+              <div class="row">
+                <div class="col-4 text-center mt-2">
+                  <i class="fa-solid fa-face-angry"></i>
+                </div>
+                <div class="col-8">
+                  <h2>4</h2>
+                  <span>Reclamos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graficos -->
+
+      <div class="row">
+        <div class="col-xl-8 col-lg-12 mb-5">
+          <div class="card">
+            <div class="card-body card-graph">
+              <div class="row">
+                <h1 class="col-12 fs-3">Actividad semanal</h1>
+                <canvas id="lineChartDashboard" ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-12 mb-5 mt-2">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <h1 class="col-12 fs-3 ">Doctores mejor valorados</h1>
+
+                <!-- <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span> -->
+                <ol class="list-group list-group-numbered">
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Subheading</div>
+                      Cras justo odio
+                    </div>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
+                  </li>
+                  
+                </ol>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </section>
+
+    <div th:replace="layout/layout :: footer"></div>
+  </body>
+</html>

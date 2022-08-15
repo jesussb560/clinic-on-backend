@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    
+    --principal-white: #faf8f8;
+    --principal-black: #3d3d3d;
+    --principal-light-blue: #1896ff;
+    --principal-grey: #e7e7e7;
+    --principal-red: #ef476f;
+
+    --principal-font-title: 'PT Sans', sans-serif;
+}
+
+/* blanco: #f6f6f6;
+negro: #3d3d3d;
+celeste: #1896ff;
+gris: #e7e7e7;
+gris-subtitulos: #adadad;
+rojoGoogle: #DB4437;
+azulFacebook: #3b5998;
+gris-fondo: #eeeded; */
+
+
+.button{
+    padding: 15px 32px;
+    text-align: center;
+    color: var(--principal-white);
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    background-color: var(--principal-light-blue);
+    border-radius: 2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blue-wallpaper{
+    background-color: var(--principal-light-blue);
+}
+
+.card{
+    overflow:hidden;
+    border-radius: 10px !important;
+    border: 0px solid var(--principal-white) !important;
+    box-shadow: 0px 10px 70px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5{
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'PT Sans', sans-serif;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p, span, label{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+input[type=email], input[type=password],input[type=text] {
+
+    border-color: #dcefff;
+    background: #dcefff;
+    border-radius: .2em;
+    padding: 2%;
+
+}
