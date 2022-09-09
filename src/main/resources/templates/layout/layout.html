@@ -20,7 +20,7 @@
       </div>
 
       <div class="header__img">
-        <img src="assets/img/perfil.jpg" alt="" />
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="" />
       </div>
 
   </header>
@@ -29,20 +29,20 @@
 
       <nav class="nav">
         <div>
-          <a href="#" class="nav__logo">
+          <a th:href="@{/web/users/dashboard}" class="nav__logo">
             <i class="bx bx-layer nav__logo-icon"></i>
             <span class="nav__logo-name">Clinic-On</span>
           </a>
 
           <div class="nav__list">
-            <a href="#" class="nav__link active">
+            <a th:href="@{/web/users/dashboard}" class="nav__link active">
               <i class="bx bx-grid-alt nav__icon"></i>
               <span class="nav__name">Dashboard</span>
             </a>
 
-            <a href="#" class="nav__link">
+            <a th:href="@{/web/users/index}" class="nav__link">
               <i class="bx bx-user nav__icon"></i>
-              <span class="nav__name">Users</span>
+              <span class="nav__name">Usuarios</span>
             </a>
           </div>
         </div>

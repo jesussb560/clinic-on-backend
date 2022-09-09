@@ -13,12 +13,10 @@ import com.app.clinicon.user.UserPrincipal;
 import com.app.clinicon.user.UserService;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
-@Slf4j
 public class JwtUserDetailsService implements UserDetailsService {
 
     private final UserService userService;
@@ -26,7 +24,7 @@ public class JwtUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String rut) throws UsernameNotFoundException {
 
-        User user = userService.findByRut(rut);
+        User user = userService.findByRut(rut); 
 
         if(user.getStatus() == 0) throw new EntityNotFoundException("User not found");
 
@@ -37,7 +35,6 @@ public class JwtUserDetailsService implements UserDetailsService {
     public UserDetails loadUserById(Long id) {
 
     	User user = userService.findById(id);
-        log.info("USER ES {}", user.getId());
         return UserPrincipal.create(user);
         
     }

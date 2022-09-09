@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="layout/layout :: head"></head>
+  <body id="body-pd">
+
+    <div th:replace="layout/layout :: header"></div>
+    <div th:replace="layout/layout :: sidebar"></div>
+
+    <section class="container-fluid">
+        <h1 >Crear usuario</h1>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-xl-3 col-lg-4 col-md-12 border-right">
+                                <div class="row text-center mt-5 ms-2 me-2">
+
+                                    <div class="col-12 mb-2">
+                                        <img class="rounded-circle"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="avatar" width="100"
+                                        height="100" />
+                                    </div>
+
+                                    <div class="col-12 ">
+                                        <span class="fs-5">nombre nombre</span>
+                                    </div>
+
+                                    <div class="col-12 mb-5">
+                                        <span class="fs-6 font-grey">Doctor</span>
+                                    </div>
+
+                                    <div class="col-12 mb-5">
+                                        <div class="row">
+                                            <div class="col-4 ">
+                                                <div class="row border-right">
+                                                    <div class="col-12">
+                                                        <span class="fs-5">1</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <span class="font-super-small font-grey ">Especialidades</span>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                            <div class="col-4 ">
+                                                <div class="row border-right">
+                                                    <div class="col-12">
+                                                        <span class="fs-5">1</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <span class="font-super-small font-grey">Notas</span>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-4 ">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <span class="fs-5">1</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <span class="font-super-small font-grey">Consultas</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-5 ">
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <input type="file" name="" id="" class="form-control">
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-danger">Desactivar</button>
+                                            </div>
+                                            <div class="col-12" style="display: none;">
+                                                <button class="btn btn-success">Activar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xl-9 col-lg-8 col-md-12 ">
+                                
+                                <form>
+                                        <div class="row m-2 ">
+
+                                            <div class="mb-3 col-6">
+                                                <label for="firstName" class="form-label">Nombres *</label>
+                                                <input type="text" class="form-control dash" id="firstName">
+                                            </div>
+                                            <div class="mb-3 col-6">
+                                                <label for="firstName" class="form-label">Apellidos *</label>
+                                                <input type="text" class="form-control dash" id="firstName">
+                                            </div>
+
+                                            <div class="mb-3 col-6">
+                                                <label for="firstName" class="form-label">Email *</label>
+                                                <input type="email" class="form-control dash" id="firstName">
+                                            </div>
+
+                                            <div class="mb-3 col-6">
+                                                <label for="firstName" class="form-label">Dirección</label>
+                                                <input type="text" class="form-control dash" id="firstName">
+                                            </div>
+
+                                            <div class="mb-3 col-6">
+                                                <label for="firstName" class="form-label">Ciudad *</label>
+                                                <select class="form-select dash" aria-label="Default select example">
+                                                    <option selected>Seleccionar...</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                  </select>
+                                            </div>
+
+                                            <div class="mb-3 col-6">
+                                                <label for="firstName" class="form-label">Genero *</label>
+                                                <select class="form-select dash" aria-label="Default select example">
+                                                    <option selected>Genero...</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                  </select>
+                                            </div>
+                                            
+                                            <div class="col-12 ">
+                                                <button type="submit" class="btn btn-primary">Volver</button>
+                                                <button type="submit" class="btn btn-primary float-end">Crear</button>
+                                            </div>
+                                        
+
+                                        </div>
+
+                                        <div class="row" >
+                                            
+                                        </div>
+
+                                </form>
+
+                            </div>
+
+                           
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div th:replace="layout/layout :: footer"></div>
+
+  </body>
+</html>

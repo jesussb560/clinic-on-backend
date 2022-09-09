@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/layout :: head"></head>
+<body id="body-pd">
+
+    <div th:replace="layout/layout :: header"></div>
+    <div th:replace="layout/layout :: sidebar"></div>
+
+    <section class="container ">
+
+       <div class="row mb-2">
+        <div class="col-6">
+            <h1>Usuarios</h1>
+        </div>
+        <div class="col-6">
+            <a th:href="@{/web/users/create}" class="button float-end">Crear nuevo <i class="fa-solid fa-plus"></i></a>
+        </div>
+       </div>
+
+       <div class="row mt-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                  <div class="row m-1">
+
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="row">
+                            <h1 class="fs-5">¿Buscas algo en específico?</h1>
+                            <input type="text" name="username" id="username" class="form-control dash" placeholder="Buscar por rut, nombre, email, etc..." />
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-6 fs-5">
+                        <h1 class="fs-5 mb-2">Tipo</h1>
+                        <select class="form-select dash" aria-label="Default select example">
+                            <option selected>Seleccionar...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 fs-5">
+                        <h1 class="fs-5 mb-2">Estado</h1>
+                        <select class="form-select dash" aria-label="Default select example">
+                            <option selected>Seleccionar...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-6 fs-5 d-flex justify-content-start align-items-end">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </div>
+                    
+                  </div>
+                </div>
+
+              </div>
+        </div>
+       </div>
+
+       <div class="row mt-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                  <div class="row m-1">
+
+                    <div class="col-12 mb-5 d-flex flex-row bd-highlight justify-content-start">
+                      <a type="submit" class="btn btn-success me-2"> <i class="fa-solid fa-file-excel "></i> Exportar excel</a>
+                      <a type="submit" class="btn btn-danger float-start"> <i class="fa-solid fa-file-pdf "></i> Exportar pdf</a>
+                    </div>
+
+                    <div class="col-12">
+                        <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Rut</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Fecha registro</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Accion</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td><a type="submit" class="btn btn-primary">Editar</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td><a type="submit" class="btn btn-primary">Editar</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td >Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td><a type="submit" class="btn btn-primary">Editar</a></td>
+
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td><a type="submit" class="btn btn-primary">Editar</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td><a type="submit" class="btn btn-primary">Editar</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td><a type="submit" class="btn btn-primary">Editar</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                            </ul>
+                          </nav>
+                    </div>
+                    
+                  </div>
+                </div>
+
+              </div>
+        </div>
+       </div>
+
+    </section>
+    
+    <div th:replace="layout/layout :: footer"></div>
+</body>
+</html>

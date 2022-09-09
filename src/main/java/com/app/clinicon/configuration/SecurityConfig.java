@@ -27,7 +27,7 @@ public class SecurityConfig {
 
     private final JwtAuthenticationHandlerUnauthorized jwtAuthenticationHandlerUnauthorized;
 
-    private final String[] antMatchers = {"/api/user/sign-up", "/api/user/sign-in", "/web/user/account-activation/**"};
+    private final String[] antMatchers = {"/api/user/sign-up", "/api/user/sign-in", "/web/users/account-activation/**"};
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -51,7 +51,7 @@ public class SecurityConfig {
         return httpSecurity
             .csrf()
             .disable()
-            .requestMatchers().antMatchers("/api/**", "/web/user/account-activation/**")
+            .requestMatchers().antMatchers("/api/**", "/web/users/account-activation/**")
         .and()
             .authorizeRequests()
             .antMatchers(antMatchers)
@@ -77,16 +77,16 @@ public class SecurityConfig {
         return httpSecurity
             .requestMatchers().antMatchers("/web/**")
         .and()
-            //.authorizeRequests().antMatchers("/web/user/hello").permitAll()
+            //.authorizeRequests().antMatchers("/web/users/hello").permitAll()
             .authorizeRequests().anyRequest().authenticated()
         .and()
             .formLogin()
-            .loginPage("/web/user/sign-in")
-            .defaultSuccessUrl("/web/user/dashboard")
+            .loginPage("/web/users/sign-in")
+            .defaultSuccessUrl("/web/users/dashboard")
             .permitAll()
         .and()
             .logout()
-            .logoutSuccessUrl("/web/user/sign-in")
+            .logoutSuccessUrl("/web/users/sign-in")
             .permitAll()
         .and()
             .exceptionHandling().accessDeniedPage("/error_403")

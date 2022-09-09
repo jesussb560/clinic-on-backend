@@ -7,65 +7,65 @@
     <div th:replace="layout/layout :: header"></div>
     <div th:replace="layout/layout :: sidebar"></div>
 
-    <section class="container-fluid">
-      <h1 class="mb-3 mt-4">Dashboard</h1>
+    <section class="container">
+      <h1 >Mi dashboard</h1>
 
-      <div class="row justify-content-center mb-5">
-        <div class="col-xl-3 col-lg-6 mb-2">
+      <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-xl-3 col-lg-6 col-md-6 mb-2">
           <div class="card">
             <div class="card-body card-dash users">
               <div class="row">
                 <div class="col-4 text-center mt-2">
-                  <i class="fa-solid fa-users"></i>
+                  <i class="fa-solid fa-users large-icon"></i>
                 </div>
                 <div class="col-8">
-                  <h2>1432</h2>
-                  <span>Total usuarios</span>
+                  <span>Usuarios</span>
+                  <h2 th:text="${dashboardResponse.usersCount}"></h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 mb-2 ">
+        <div class="col-xl-3 col-lg-6 col-md-6 mb-2 ">
           <div class="card">
             <div class="card-body card-dash doctors">
               <div class="row">
                 <div class="col-4 text-center mt-2">
-                  <i class="fa-solid fa-user-doctor"></i>
+                  <i class="fa-solid fa-user-doctor large-icon"></i>
                 </div>
                 <div class="col-8">
-                  <h2>234</h2>
-                  <span>Total doctores</span>
+                  <span>Doctores</span>
+                  <h2 th:text="${dashboardResponse.doctorsCount}"></h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 mb-2 ">
+        <div class="col-xl-3 col-lg-6 col-md-6 mb-2 ">
           <div class="card">
             <div class="card-body card-dash medicals">
               <div class="row">
                 <div class="col-4 text-center mt-2">
-                  <i class="fa-solid fa-house medicals"></i>
+                  <i class="fa-solid fa-house medicals large-icon"></i>
                 </div>
                 <div class="col-8">
-                  <h2>3400</h2>
                   <span>Consultas</span>
+                  <h2 th:text="${dashboardResponse.appointmentsCount}"></h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 mb-2">
+        <div class="col-xl-3 col-lg-6 col-md-6 mb-2">
           <div class="card">
             <div class="card-body card-dash angries">
               <div class="row">
                 <div class="col-4 text-center mt-2">
-                  <i class="fa-solid fa-face-angry"></i>
+                  <i class="fa-solid fa-face-angry large-icon"></i>
                 </div>
                 <div class="col-8">
-                  <h2>4</h2>
                   <span>Reclamos</span>
+                  <h2 th:text="${dashboardResponse.complainsCount}"></h2>
                 </div>
               </div>
             </div>
@@ -74,96 +74,144 @@
       </div>
 
       <!-- Graficos -->
-
       <div class="row">
-        <div class="col-xl-8 col-lg-12 mb-5">
-          <div class="card">
-            <div class="card-body card-graph">
-              <div class="row">
-                <h1 class="col-12 fs-3">Actividad semanal</h1>
-                <canvas id="lineChartDashboard" ></canvas>
+
+        <div class="col-xl-8 col-lg-12">
+          <h1 class="col-12 fs-3">Actividad semanal</h1>
+          <canvas id="lineChartDashboard"  ></canvas>
+        </div>
+        <!-- <div class="col-xl-4 col-lg-12">
+          <h1 class="col-12 fs-3">Especialidades populares</h1>
+          <canvas id="pieChartDashboard" ></canvas>
+        </div> -->
+          
+
+          
+        
+        <div class="col-xl-4 col-lg-6">
+          <h1 class="col-12 fs-3 ">Doctores mejor valorados</h1>
+
+            <div class="row mt-3">
+
+              <div class="card">
+                <div class="card-body card-dash">
+                  <div class="row">
+
+                    <div class="col-md-12 col-lg-12 col-xl-12 mb-3">
+                      <div class="d-flex flex-start">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
+                          height="65" />
+                        <div class="flex-grow-1 flex-shrink-1">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <h3 class="mb-1 ">
+                                Maria Smantha
+                              </h3>
+                              <span class="badge bg-primary rounded-pill fs-6"><i class="fa-solid fa-face-smile-beam"> 14</i></span>
+                            </div>
+                            <p class="small mb-0 font-grey">
+                              Kinesiologa
+                          </div>
+                          
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 col-lg-12 col-xl-12 mb-3">
+                    <div class="d-flex flex-start">
+                      <img class="rounded-circle shadow-1-strong me-3"
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
+                        height="65" />
+                      <div class="flex-grow-1 flex-shrink-1">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="mb-1 ">
+                              Maria Smantha
+                            </h3>
+                            <span class="badge bg-primary rounded-pill fs-6"><i class="fa-solid fa-face-smile-beam"> 14</i></span>
+                          </div>
+                          <p class="small mb-0 font-grey">
+                            Kinesiologa
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-12 col-xl-12 mb-3">
+                  <div class="d-flex flex-start">
+                    <img class="rounded-circle shadow-1-strong me-3"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
+                      height="65" />
+                    <div class="flex-grow-1 flex-shrink-1">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h3 class="mb-1 ">
+                            Maria Smantha
+                          </h3>
+                          <span class="badge bg-primary rounded-pill fs-6"><i class="fa-solid fa-face-smile-beam"> 14</i></span>
+                        </div>
+                        <p class="small mb-0 font-grey">
+                          Kinesiologa
+                      </div>
+                      
+                    </div>
+                  </div>
               </div>
+
+              <div class="col-md-12 col-lg-12 col-xl-12 mb-3">
+                <div class="d-flex flex-start">
+                  <img class="rounded-circle shadow-1-strong me-3"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
+                    height="65" />
+                  <div class="flex-grow-1 flex-shrink-1">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-1 ">
+                          Maria Smantha
+                        </h3>
+                        <span class="badge bg-primary rounded-pill fs-6"><i class="fa-solid fa-face-smile-beam"> 14</i></span>
+                      </div>
+                      <p class="small mb-0 font-grey">
+                        Kinesiologa
+                    </div>
+                    
+                  </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-12 mb-5 mt-2">
-          <div class="card">
-            <div class="card-body ">
-              <div class="row">
-                <h1 class="col-12 fs-3 ">Doctores mejor valorados</h1>
 
-                <!-- <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span> -->
-                <ol class="list-group list-group-numbered">
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <div class="d-flex flex-start">
+                  <img class="rounded-circle shadow-1-strong me-3"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
+                    height="65" />
+                  <div class="flex-grow-1 flex-shrink-1">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-1 ">
+                          Maria Smantha
+                        </h3>
+                        <span class="badge bg-primary rounded-pill fs-6"><i class="fa-solid fa-face-smile-beam"> 14</i></span>
+                      </div>
+                      <p class="small mb-0 font-grey">
+                        Kinesiologa
                     </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-face-smile-beam fs-6"> 14</i> </span>
-                  </li>
-                  
-                </ol>
+                    
+                  </div>
+                </div>
             </div>
-          </div>
-        </div>
 
+                   
+                  </div>
+                </div>
+              </div>
 
+                    
 
-      </div>
+            </div>
+            </div>
+            </div>
 
     </section>
 

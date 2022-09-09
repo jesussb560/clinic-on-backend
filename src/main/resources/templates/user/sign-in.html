@@ -35,13 +35,13 @@
                       <div class="col-md-7">
                         <div class="card-body text-center">
                           <h1 class="card-title mb-5 mt-5">Login</h1>
-                          <form th:action="@{/web/user/sign-in}" method="POST">
+                          <form th:action="@{/web/users/sign-in}" method="POST">
                           <div class="pb-2">
-                            <input type="text" name="username" id="username" class="form-control mb-2" placeholder="Rut" autofocus />
+                            <input type="text" name="username" id="username" class="form-control mb-2 input-sign-in" placeholder="Rut" autofocus />
                           </div>
         
                           <div >
-                            <input  type="password"  name="password" id="password" class="form-control" placeholder="Clave"/>
+                            <input  type="password"  name="password" id="password" class="form-control input-sign-in" placeholder="Clave"/>
                           </div>
         
                         <div class="col-12">

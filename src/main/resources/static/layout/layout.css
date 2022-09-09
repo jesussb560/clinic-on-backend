@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @import url('../general.css');
 
 /*===== VARIABLES CSS =====*/
@@ -40,9 +37,7 @@ a{
   text-decoration: none;
 }
 
-h2{
-  color: var(--principal-white);
-}
+
 .list-specs h2{
   color: var(--principal-light-blue);
 }
@@ -57,40 +52,23 @@ height: auto;
   
 }
 
-/* .list-group{
-  border-color: var(--principal-white);
-  overflow-y: scroll;
-  height: 50%;
-} */
-
-
 .card-dash{
-  color: var(--principal-white);
+  color: var(--principal-black);
+  background-color: #ffffff;
 }
 
-.users{
-  background-color: #00A6A6;
+.card-dash h2{
+  color: var(--principal-light-blue);
 }
 
-.doctors{
-  background-color: #3AAFB9;
-}
-
-.medicals{
-  background-color: #92B6B1;
-}
-
-.angries{
-  background-color: var(--principal-red);
-}
-
-.fa-solid{
+.large-icon{
   font-size: 50px;
-  color: var(--principal-white);
+  color: var(--principal-black);
 }
 
 .card{
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 0px 0px 0px rgba(121, 121, 121, 0.2); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 canvas{
@@ -98,8 +76,67 @@ canvas{
 }
 
 .card-list{
-  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+
+
+/* INPUTS DASHB */
+.dash{
+
+  border-color: var(--principal-white);
+  background: var(--principal-white);
+  border-radius: 2em;
+
+
+}
+
+.btn{
+  border-radius: 2em;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+
+}
+
+.btn-primary, .bg-primary {
+  background: var(--principal-light-blue) !important;
+  border-color: var(--principal-light-blue) !important;
+}
+
+.btn-danger, .bg-danger {
+  background: var(--principal-red) !important;
+  border-color: var(--principal-red) !important;
+}
+
+.btn-success, .bg-success {
+  background: var(--principal-green) !important;
+  border-color: var(--principal-green) !important;
+}
+
+
+.container, .container-fluid{
+  margin-top: 5%;
+}
+
+.font-grey{
+  color: var(--principal-grey);
+}
+
+.font-super-small{
+  font-size: 12px;
+}
+
+.border-right{
+  border-right: .2px solid #d3d3d3;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*===== HEADER =====*/
@@ -115,6 +152,7 @@ canvas{
   padding: 0 1rem;
   z-index: var(--z-fixed);
   transition: .5s;
+  background-color: #ffffff;
 }
 
 .header__toggle{
@@ -146,6 +184,8 @@ canvas{
   background-color: var(--principal-light-blue);
   padding: .5rem 1rem 0 0;
   transition: .5s;
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
   z-index: var(--z-fixed);
 }
 
@@ -162,7 +202,7 @@ canvas{
   grid-template-columns: max-content max-content;
   align-items: center;
   column-gap: 1rem;
-  padding: .5rem 0 .5rem 1.5rem;
+  padding: .5rem 0 .5rem 1rem;
 }
 
 .nav__logo{
@@ -213,7 +253,7 @@ canvas{
 .active{
   color: var(--principal-black);
   background-color: var(--principal-white);
-  border-radius: 1rem;
+  border-radius: 1.5em;
 }
 
 /* .active::before{

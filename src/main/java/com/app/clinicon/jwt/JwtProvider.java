@@ -31,17 +31,14 @@ public class JwtProvider implements Serializable {
 
     private final TokenPropertiesConfig tokenPropertiesConfig;
 
-
     public String generateToken(Authentication authentication) {
 
-        UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
-
-        Key secretKey = Keys.hmacShaKeyFor(tokenPropertiesConfig.getSecret().getBytes());
-
         Date now = new Date();
-        Date expiryDate = new Date(now.getTime() + tokenPropertiesConfig.getExpirationInMs());
-
         Gson gson = new Gson();
+
+        UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
+        Key secretKey = Keys.hmacShaKeyFor(tokenPropertiesConfig.getSecret().getBytes());
+        Date expiryDate = new Date(now.getTime() + tokenPropertiesConfig.getExpirationInMs());
 
         return Jwts.builder()
                 .serializeToJsonWith(new GsonSerializer<>(gson))

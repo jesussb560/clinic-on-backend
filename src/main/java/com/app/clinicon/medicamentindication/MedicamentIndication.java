@@ -15,7 +15,6 @@ import javax.persistence.Table;
 
 import com.app.clinicon.medicament.Medicament;
 import com.app.clinicon.prescription.Prescription;
-import com.app.clinicon.user.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

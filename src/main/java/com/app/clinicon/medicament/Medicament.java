@@ -40,6 +40,7 @@ public class Medicament {
     private long id;
 
     private String name;
+    private String img;
     private int requiresPrescription;
 
     //format
